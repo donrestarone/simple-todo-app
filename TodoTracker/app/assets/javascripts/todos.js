@@ -13,12 +13,12 @@ document.addEventListener('DOMContentLoaded', function(){
 		$.ajax({
 			url: myForm.getAttribute('action'),
 			method: myForm.getAttribute('method'),
-			dataType: 'html',
+			dataType: 'json',
 			data: $(myForm).serialize()
 		}).done(function(data){
 			var myList = document.querySelector('#myList');
 			var li = document.createElement('li');
-
+			console.log(data);
 			li.append(data.data.content);
 			$(myList).append(li);
 			//$(myList).append(data);

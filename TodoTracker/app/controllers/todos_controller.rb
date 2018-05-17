@@ -13,7 +13,7 @@ class TodosController < ApplicationController
   			respond_to do |form|
   				
   				form.html do
-  					render partial: 'content', locals: {t: @todo}
+  					render partial: 'content', locals: {todo: @todo}
   				end
 
   				form.json {render json: {data: @todo}}
